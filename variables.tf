@@ -11,7 +11,7 @@ variable "rds_instance_identifer" {
 
 variable "database_name" {
     type        = string
-    description = "The name of your database instance"
+    description = "The name of a database to create on your database instance"
 }
 
 variable "database_username" {
