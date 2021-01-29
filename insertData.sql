@@ -13,11 +13,11 @@ TRUNCATE TABLE TaskImage;
 SET FOREIGN_KEY_CHECKS = 1;
 
 INSERT INTO Charity 
-    (charityId, charityName, charityDescription) 
+    (charityId, charityName, charityDescription, imageUrl) 
 VALUES 
-("963387ca-5c9d-11eb-83f0-06358a409ac0", "NSPCC","bla bla bla"),
-("e95d69d9-5c9d-11eb-83f0-06358a409ac0", "St Mary's","bla bla bla"),
-("e9ded807-5c9d-11eb-83f0-06358a409ac0", "Derrian House","bla bla bla")
+("963387ca-5c9d-11eb-83f0-06358a409ac0", "NSPCC","bla bla bla","https://github.com/BackToTheFutureTech/Front-end/blob/main/src/Assets/SortClothing.jpg?raw=true"),
+("e95d69d9-5c9d-11eb-83f0-06358a409ac0", "St Mary's","bla bla bla","https://github.com/BackToTheFutureTech/Front-end/blob/main/src/Assets/SortClothing.jpg?raw=true"),
+("e9ded807-5c9d-11eb-83f0-06358a409ac0", "Derrian House","bla bla bla", "https://github.com/BackToTheFutureTech/Front-end/blob/main/src/Assets/SortClothing.jpg?raw=true")
 ; 
 
 INSERT INTO TaskImage 
