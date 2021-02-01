@@ -10,7 +10,7 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
     region    = var.aws_region
-    profile   = "Terraform"
+    profile   = "terraform"
 }
 
 # For this guide we'll just utilise the default VPC
@@ -63,4 +63,15 @@ resource "aws_db_instance" "default" {
   skip_final_snapshot       = true
 
   vpc_security_group_ids    = [aws_security_group.mysql_public_access.id]
+}
+resource "aws_s3_bucket" "myimages_public_access" {
+  bucket = "madday-images"
+  acl    = "public-read-write"
+
+  cors_rule {
+      allowed_headers = ["*"]
+      allowed_methods = ["PUT", "POST","GET","DELETE"]
+      allowed_origins = ["*"]
+      max_age_seconds = 3000
+    }
 }
